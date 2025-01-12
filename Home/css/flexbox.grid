@@ -1,15 +1,37 @@
-
-.flex-container {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: DodgerBlue;
+.container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
   }
   
-  .flex-container > div {
+  header, footer {
+    background-color: #f0f0f0;
+    padding: 20px;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .main-content {
+    flex: 2;
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .main-content > div {
     background-color: #f1f1f1;
-    width: 400px;
-    margin: 25px;
+    width: 350px;
+    margin: 10px;
     text-align: center;
-    line-height: 60px;
-    font-size: 20px;
-  } 
+    line-height: 35px;
+    font-size: 15px;
+  }
+  
+  .sidebar {
+    flex: 1;
+    background-color: #f5f5f5;
+    padding: 20px;
+  }

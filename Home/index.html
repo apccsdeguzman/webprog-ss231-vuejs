@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My first Vue page</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/flexbox-grid.css?version=0.1">  
+<link rel="stylesheet" href="css/bind.css?version=0.1">   
+<link rel="stylesheet" href="css/images.css?version=0.1">   
+</head>
+<body>
+  
+    <h1>My Personal Profile Webpage</h1>
+
+<div class="flex-container">
+  <div>About Me!: Hello! My name is Charlemagne, but you can call me Cha! I am passionate about discovering new things and learning from it.</div>
+  <div>Education: Graduated from Pateros Catholic School</div>
+  <div>Course: I am currently taking BSIT-MI </div>
+  <div>IT Experience: Learned basic programming languages like Python and Java on my past subjects.</div>
+  <div>Hobbies & Interests:  I like to take time to meditate, explore makeup, and cook for the people that I love I enjoy taking time to relax and recharge.</div>
+  <div>Goals in life / Dream:  to provide for my family and repay them for all their hard work and sacrifices.</div>
+  <div>Picture Gallery: <img src="blob:https://www.messenger.com/32515397-c5a7-4ac6-9556-0cbad5beb7d2"></div>
+</div>
+
+<div id="app">
+  {{ message }} <br>
+  {{'Random number: ' + Math.ceil(Math.random()*6) }}
+    <div v-bind:class="vueClass">This element is bound to the "pinkBG" class.
+    </div>
+</div>
+
+<div id="app2">
+  <div>
+    <figure v-for="x in manyFoods">
+      <img v-bind:src="x.url">
+      <figcaption>{{ x.name }}</figcaption>
+    </figure>
+  </div>
+</div>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="js/vue.js"></script>
+<script src="js/imagess.js"></script>
+
+
+
+</body>
+</html>

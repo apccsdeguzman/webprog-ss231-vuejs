@@ -1,25 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>My first Vue page</title>
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/flexbox-grid.css?version=0.1">  
-<link rel="stylesheet" href="css/bind.css?version=0.1">   
-<link rel="stylesheet" href="css/images.css?version=0.1">   
+  <title>My first Vue page</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/flexbox-grid.css?version=0.1">   
+  <link rel="stylesheet" href="css/bind.css?version=0.1">   
+  <link rel="stylesheet" href="css/images.css?version=0.1">   
+  <link rel="stylesheet" href="css/shopping.css?version=0.1">   
 </head>
 <body>
-  
-    <h1>My Personal Profile Webpage</h1>
 
-<div class="flex-container">
-  <div>About Me!: Hello! My name is Charlemagne, but you can call me Cha! I am passionate about discovering new things and learning from it.</div>
-  <div>Education: Graduated from Pateros Catholic School</div>
-  <div>Course: I am currently taking BSIT-MI </div>
-  <div>IT Experience: Learned basic programming languages like Python and Java on my past subjects.</div>
-  <div>Hobbies & Interests:  I like to take time to meditate, explore makeup, and cook for the people that I love I enjoy taking time to relax and recharge.</div>
-  <div>Goals in life / Dream:  to provide for my family and repay them for all their hard work and sacrifices.</div>
-  <div>Picture Gallery: <img src="blob:https://www.messenger.com/32515397-c5a7-4ac6-9556-0cbad5beb7d2"></div>
-</div>
+    <div class="container">
+        <header>
+            <h1>Personal Profile Web page </h1>
+          </header>
+        <main>
+          <section class="main-content">
+                   
+            <div>1 <br>About Me: Hello! My name is Charlemagne, but you can call me Cha! I am passionate about discovering new things and learning from it.</div>
+            <div>2 <br>Education / Achievements: Graduated from Pateros Catholic School.</div>
+            <div>3 <br>Course:  I am currently taking BSIT-MI. </div>  
+            <div>4 <br>IT Experience: Learned basic programming languages like Python and Java on my past subjects.</div>
+            <div>5 <br>Hobbies & Interests: I like to take time to meditate, explore makeup, and cook for the people that I love I enjoy taking time to relax and recharge.</div>
+            <div>6 <br>Goals In Life / Dream: to provide for my family and repay them for all their hard work and sacrifices.</div>  
+            <div>7</div>
+    
+            </section>
+          <aside class="sidebar">  Sidebar
+            <br>Picture Gallery: <img src="blob:https://www.messenger.com/32515397-c5a7-4ac6-9556-0cbad5beb7d2"></div>  
+        </aside>
+        </main>
+        <footer>  Asia Pacific College       </footer>
+      </div>
+    
 
 <div id="app">
   {{ message }} <br>
@@ -36,12 +49,58 @@
     </figure>
   </div>
 </div>
+  
+<div id="app3">
+  <form v-on:submit.prevent="addItem">
+    <p>
+      What do you need? <br>
+      <input type="text" required placeholder="item name.." v-model="itemName">
+    </p>
+    <p>
+      How many? <br>
+      <input type="number" placeholder="number of items.." v-model="itemNumber">
+    </p>
+    <p>
+      Important?
+      <label>
+        <input type="checkbox" v-model="itemImportant">
+        {{ itemImportant }}
+      </label>
+    </p>
+    <button type="submit">Add item</button>
+  </form>
+  <br>
+  <hr>
 
+  <div>
+    <p><strong>Shopping list:</strong></p>
+    <ul id="ulToFind">
+      <li 
+        v-for="item in shoppingList" 
+        v-bind:class="{ impClass: item.important }"
+        v-on:click="item.found=!item.found"
+        v-show="!item.found">
+          {{ item.name }}, {{ item.number}}
+      </li>
+    </ul>
+    <ul id="ulFound">
+      <li 
+        v-for="item in shoppingList" 
+        v-bind:class="{ impClass: item.important }"
+        v-on:click="item.found=!item.found"
+        v-show="item.found">
+          {{ item.name }}, {{ item.number}}
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+  
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <script src="js/vue.js"></script>
-<script src="js/imagess.js"></script>
-
-
+<script src="js/images.js"></script>
+<script src="js/shopping.js"></script>
 
 </body>
 </html>

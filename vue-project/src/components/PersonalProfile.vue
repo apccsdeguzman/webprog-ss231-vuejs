@@ -3,12 +3,12 @@
         <header> <h1>Personal Profile Web page </h1>  </header>
         <main>
           <section class="main-content">
-            <div>1 About Me: Hello! I'm Latrell Allen Cruz, and I am currently a 3rd-year student pursuing a BSIT.</div>
-            <div>2 Education / Achievements: I graduated from Pateros Catholic School and went on to study CSIT. I'm passionate about web development and currently learning backend technologies like Java.</div>
-            <div>3 Course: Currently studying BSc. CSIT at my university and working towards gaining deeper knowledge in backend development.</div>  
-            <div>4 IT Experience: I've learned programming languages like Python and Java, and I have experience in frontend technologies such as HTML and CSS.</div>
-            <div>5 Hobbies & Interests: I love learning new technologies, coding, and solving problems. In my free time, I enjoy playing basketball with my family.</div>
-            <div>6 Goals In Life / Dream: My goal is to give back to my parents for their sacrifices and make my family proud by excelling in the field of IT.</div>  
+            <div>1 About Me: Hello! My name is Charlemagne, but you can call me Cha! I am passionate about discovering new things and learning from it.</div>
+            <div>2 Education / Achievements: Senior High School - HUMSS Strand - Pateros Catholic School</div>
+            <div>3 Course: I am currently pursuing BSIT-MI </div>  
+            <div>4 IT Experience: Learned programming languages like Python and Java in my past subjects.</div>
+            <div>5 Hobbies & Interests: In my free time, I like to meditate, explore makeup, and cook for the people I love. I enjoy taking time to relax and recharge.</div>
+            <div>6 Goals In Life / Dream: My ultimate goal is to provide for my family and repay them for all their hard work and sacrifices.</div>  
           </section>
           <aside class="sidebar">
             </aside>

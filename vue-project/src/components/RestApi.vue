@@ -33,7 +33,7 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { ref, reactive, onMounted, computed } from 'vue';
 import axios from 'axios';
 
